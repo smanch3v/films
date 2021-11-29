@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import Movie from './Movies';
+import Movie from "./Movies";
 
 const MovieList = (props) => {
   return (
-      <ul>
+    <ul>
       {props.movies.map((movie) => (
         <Movie
           title={movie.title}

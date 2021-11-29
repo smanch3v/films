@@ -11,10 +11,10 @@ import MovieList from "./components/MovieList";
 function App() {
   const [movies, setMovies] = useState([]);
   const baseURL = "https://swapi.dev/api/films";
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   function fetchMoviesHandler() {
-    setLoading(true)
+    setLoading(true);
     fetch(baseURL)
       .then((response) => {
         return response.json();
@@ -28,8 +28,8 @@ function App() {
             releaseDate: movieData.realese_date,
           };
         });
-        setMovies(transformedMovies)
-        setLoading(false)
+        setMovies(transformedMovies);
+        setLoading(false);
       });
   }
 
